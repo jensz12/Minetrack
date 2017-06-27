@@ -44,7 +44,7 @@ var bigChartOptions = {
     },
     yaxis: {
         show: true,
-        tickSize: 2000,
+        tickSize: 100,
         tickLength: 10,
         tickFormatter: function(value) {
             return formatNumber(value);
@@ -99,7 +99,7 @@ function handlePlotHover(event, pos, item) {
     if (item) {
         var text = getTimestamp(item.datapoint[0] / 1000) + '\
             <br />\
-            ' + formatNumber(item.datapoint[1]) + ' Players';
+            ' + formatNumber(item.datapoint[1]) + ' Spillere';
 
         if (item.series && item.series.label) {
             text = item.series.label + '<br />' + text;

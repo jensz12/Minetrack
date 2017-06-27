@@ -32,7 +32,7 @@ function updateServerStatus(lastEntry) {
 
     if (lastEntry.result) {
         var result = lastEntry.result;
-        var newStatus = 'Players: <span style="font-weight: 500;">' + formatNumber(result.players.online) + '</span>';
+        var newStatus = 'Spillere: <span style="font-weight: 500;">' + formatNumber(result.players.online) + '</span>';
 
         var listing = graphs[lastEntry.info.name].listing;
 
@@ -57,7 +57,7 @@ function updateServerStatus(lastEntry) {
         if (findErrorMessage(lastEntry.error)) {
             newStatus += findErrorMessage(lastEntry.error);
         } else {
-            newStatus += 'Failed to ping!';
+            newStatus += 'Kunne ikke hente info!';
         }
 
         div.html(newStatus + '</span>');
@@ -74,7 +74,7 @@ function updateServerStatus(lastEntry) {
     $("#stat_networks").text(formatNumber(keys.length));
 
     if (lastEntry.record) {
-        $('#record_' + safeName(info.name)).html('Record: ' + formatNumber(lastEntry.record));
+        $('#record_' + safeName(info.name)).html('Flest spillere målt: ' + formatNumber(lastEntry.record));
     }
 
     updatePercentageBar();
@@ -223,12 +223,12 @@ function setAllGraphVisibility(visible) {
 }
 
 function validateBootTime(bootTime, socket) {
-    $('#tagline-text').text('Validating...');
+    $('#tagline-text').text('Bekræfter...');
 
     console.log('Remote bootTime is ' + bootTime + ', local is ' + publicConfig.bootTime);
 
     if (bootTime === publicConfig.bootTime) {
-        $('#tagline-text').text('Loading...');
+        $('#tagline-text').text('Indlæser...');
 
         socket.emit('requestListing');
 
@@ -240,13 +240,13 @@ function validateBootTime(bootTime, socket) {
         mojangServicesUpdater = setInterval(updateMojangServices, 1000);
         sortServersTask = setInterval(sortServers, 10000);
     } else {
-        $('#tagline-text').text('Updating...');
+        $('#tagline-text').text('Opdatere...');
 
         $.getScript('/publicConfig.json', function(data, textStatus, xhr) {
             if (xhr.status === 200) {
                 validateBootTime(publicConfig.bootTime, socket);
             } else {
-                showCaption('Failed to update! Refresh?');
+                showCaption('Kunne ikke opdatere siden. Genindlæs den?');
             }
         });
     }
@@ -277,7 +277,7 @@ $(document).ready(function() {
 
         lastMojangServiceUpdate = undefined;
 
-        showCaption('Disconnected! Refresh?');
+        showCaption('Forbindelse mistet! Genindlæs?');
 
         lastPlayerEntries = {};
         graphs = {};
@@ -526,7 +526,7 @@ $(document).ready(function() {
             var totalPlayers = getCurrentTotalPlayers();
             var playerCount = lastPlayerEntries[currentServerHover];
 
-            renderTooltip(e.pageX + 10, e.pageY + 10, '<strong>' + currentServerHover + '</strong>: ' + roundToPoint(playerCount / totalPlayers * 100, 10) + '% of ' + formatNumber(totalPlayers) + ' tracked players.<br />(' + formatNumber(playerCount) + ' online.)');
+            renderTooltip(e.pageX + 10, e.pageY + 10, '<strong>' + currentServerHover + '</strong>: ' + roundToPoint(playerCount / totalPlayers * 100, 10) + '% af ' + formatNumber(totalPlayers) + ' spillere.<br />(' + formatNumber(playerCount) + ' online.)');
         }
     });
 

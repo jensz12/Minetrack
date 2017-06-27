@@ -3,13 +3,31 @@
 <html>
 
 	<head>
-
+		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 		<link rel="icon" type="image/png" href="/images/compass.png">
 
-		<title>Minetrack</title>
+		<title>Danske Servere - Minetrack</title>
+		<meta name="description" content="Danske Servere - Minetrack">
+		<meta name="theme-color" content="#A81010">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@jensz12">
+		<meta name="twitter:creator" content="@jensz12">
+		<meta name="twitter:title" content="Danske Servere - Minetrack">
+		<meta name="twitter:description" content="Danske Servere - Minetrack">
+		<meta name="twitter:image:src" content="http://tracker.jensz12.com/images/compass.png">
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43679005-20', 'auto');
+  ga('send', 'pageview');
+
+		</script>
 
 	</head>
 
@@ -26,8 +44,8 @@
 					<div class="column" style="padding: 20px;">
 
 						<img src="/images/compass.png" width="28" height="28" style="display: inline-block; margin-right: 5px;">
-						<h1 style="display: inline-block;" class="text-uppercase">Minetrack</h1>
-						<p class="subslogan text-uppercase">Watching <span id="stat_totalPlayers">0</span> players on <span id="stat_networks">0</span> networks.</p>
+						<h1 style="display: inline-block;" class="text-uppercase">Danske Servere - Minetrack</h1>
+						<p class="subslogan text-uppercase">Holder øje med <span id="stat_totalPlayers">0</span> spillere på <span id="stat_networks">0</span> netværk.</p>
 
 					</div>
 
@@ -43,7 +61,7 @@
 
 			<div id="perc-bar"></div>
 
-			<div id="tagline-text">Connecting...</div>
+			<div id="tagline-text">Forbinder...</div>
 
 			<div id="big-graph"></div>
 
@@ -51,7 +69,7 @@
 
 				<span style="text-align: center; display: block;">
 
-					<a onclick="toggleControlsDrawer();">Click to toggle graph controls</a>
+					<a onclick="toggleControlsDrawer();">Se graf indstillinger</a>
 
 				</span>
 
@@ -63,8 +81,8 @@
 
 					<span style="text-align: center; display: block; margin-bottom: 15px;">
 
-						<span onclick="setAllGraphVisibility(true);" class="button">Show All</span>
-						<span onclick="setAllGraphVisibility(false);" class="button">Hide All</span>
+						<span onclick="setAllGraphVisibility(true);" class="button">Vis alle</span>
+						<span onclick="setAllGraphVisibility(false);" class="button">Skjul alle</span>
 
 					</span>
 

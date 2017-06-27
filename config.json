@@ -11,7 +11,7 @@
 
 	},
 	"site": {
-		"port": 8080,
+		"port": 80,
 		"ip": "0.0.0.0"
 	},
 	"rates": {
@@ -20,11 +20,16 @@
 		"pingAll": 3000,
 		"connectTimeout": 2500
 	},
-	"logToDatabase": false,
+	"logToDatabase": true,
 	"graphDuration": 86400000,
 	"serverCategories": {
-		"minigames": "Minigame Networks",
-		"pocket": "Pocket Edition Networks"
+		"minigames": "Minigames",
+		"prison": "Prison",
+		"kitpvp": "KitPvP",
+		"skyblock": "SkyBlock",
+		"faction": "Faction",
+		"towny": "Towny",
+		"creative": "Creative"
 	},
 	"versions": {
 		"PC": [
@@ -40,6 +45,6 @@
 			0
 		]
 	},
-	"categoriesVisible": true,
+	"categoriesVisible": false,
 	"serverTypesVisible": true
 }

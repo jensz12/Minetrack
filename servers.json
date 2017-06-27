@@ -1,14 +1,92 @@
 [
 	{
-		"name": "Hypixel",
-		"ip": "mc.hypixel.net",
+		"name": "EverPvP",
+		"ip": "spil.everpvp.dk",
 		"type": "PC",
-		"category": "minigames"
+		"category": "kitpvp"
 	},
 	{
-		"name": "HiveMC",
-		"ip": "play.hivemc.com",
+		"name": "Freakyville",
+		"ip": "mc.freakyville.net",
 		"type": "PC",
-		"category": "minigames"
+		"category": "prison"
+	},
+	{
+		"name": "CreepyGames",
+		"ip": "creepygames.dk",
+		"type": "PC",
+		"category": "kitpvp"
+	},
+	{
+		"name": "GGPvP",
+		"ip": "ggpvp.dk",
+		"type": "PC",
+		"category": "kitpvp"
+	},
+	{
+		"name": "New-Age",
+		"ip": "spil.new-age.dk",
+		"type": "PC",
+		"category": "prison"
+	},
+	{
+		"name": "Minelife",
+		"ip": "play.minelife.dk",
+		"type": "PC",
+		"category": "faction"
+	},
+	{
+		"name": "LinxTechCraft",
+		"ip": "mc.linxtechcraft.dk",
+		"type": "PC",
+		"category": "prison"
+	},
+	{
+		"name": "DarkStarPvP",
+		"ip": "vanitypvp.eu",
+		"type": "PC",
+		"category": "kitpvp"
+	},
+	{
+		"name": "Daily-Life",
+		"ip": "daily-life.dk",
+		"type": "PC",
+		"category": "prison"
+	},
+	{
+		"name": "Strandet",
+		"ip": "strandet.net",
+		"type": "PC",
+		"category": "prison"
+	},
+	{
+		"name": "SuperAwesome",
+		"ip": "superawesome.dk",
+		"type": "PC",
+		"category": "prison"
+	},
+	{
+		"name": "MeCraft",
+		"ip": "mecraft.dk",
+		"type": "PC",
+		"category": "prison"
+	},
+	{
+		"name": "EventyrCraft",
+		"ip": "mc.eventyrcraft.net",
+		"type": "PC",
+		"category": "faction"
+	},
+	{
+		"name": "HubMC",
+		"ip": "hubmc.dk",
+		"type": "PC",
+		"category": "towny"
+	},
+	{
+		"name": "GiantCraft",
+		"ip": "giantcraft.dk",
+		"type": "PC",
+		"category": "prison"
 	}
 ]
