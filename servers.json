@@ -88,5 +88,30 @@
 		"ip": "giantcraft.dk",
 		"type": "PC",
 		"category": "prison"
+	},
+	{
+		"name": "RedstonePvP",
+		"ip": "mc.redstonepvp.com",
+		"type": "PC",
+		"category": "kitpvp"
+	},
+	{
+		"name": "GlowstonePvP",
+		"ip": "glowstonepvp.com",
+		"type": "PC",
+		"category": "kitpvp"
+	},
+	{
+		"name": "SeedxCraft",
+		"ip": "play2.sedexrsps.com",
+		"port": 25683,
+		"type": "PC",
+		"category": "faction"
+	},
+	{
+		"name": "Skycraftblock",
+		"ip": "skycraftblock.eu",
+		"type": "PC",
+		"category": "skyblock"
 	}
 ]
