@@ -1,51 +1,15 @@
 [
 	{
-		"name": "EverPvP",
-		"ip": "spil.everpvp.dk",
-		"type": "PC",
-		"category": "kitpvp"
-	},
-	{
 		"name": "Freakyville",
 		"ip": "mc.freakyville.net",
 		"type": "PC",
 		"category": "prison"
 	},
 	{
-		"name": "CreepyGames",
-		"ip": "creepygames.dk",
-		"type": "PC",
-		"category": "kitpvp"
-	},
-	{
-		"name": "GGPvP",
-		"ip": "ggpvp.dk",
-		"type": "PC",
-		"category": "kitpvp"
-	},
-	{
-		"name": "New-Age",
-		"ip": "spil.new-age.dk",
-		"type": "PC",
-		"category": "prison"
-	},
-	{
-		"name": "Minelife",
-		"ip": "play.minelife.dk",
-		"type": "PC",
-		"category": "faction"
-	},
-	{
 		"name": "LinxTechCraft",
 		"ip": "mc.linxtechcraft.dk",
 		"type": "PC",
 		"category": "prison"
-	},
-	{
-		"name": "DarkStarPvP",
-		"ip": "vanitypvp.eu",
-		"type": "PC",
-		"category": "kitpvp"
 	},
 	{
 		"name": "Daily-Life",
@@ -84,24 +48,6 @@
 		"category": "towny"
 	},
 	{
-		"name": "GiantCraft",
-		"ip": "giantcraft.dk",
-		"type": "PC",
-		"category": "prison"
-	},
-	{
-		"name": "RedstonePvP",
-		"ip": "mc.redstonepvp.com",
-		"type": "PC",
-		"category": "kitpvp"
-	},
-	{
-		"name": "GlowstonePvP",
-		"ip": "glowstonepvp.com",
-		"type": "PC",
-		"category": "kitpvp"
-	},
-	{
 		"name": "SeedxCraft",
 		"ip": "play2.sedexrsps.com",
 		"port": 25683,
@@ -109,9 +55,39 @@
 		"category": "faction"
 	},
 	{
-		"name": "Skycraftblock",
-		"ip": "skycraftblock.eu",
+		"name": "CubeMC",
+		"ip": "cubemc.dk",
 		"type": "PC",
-		"category": "skyblock"
+		"category": "kitpvp"
+	},
+	{
+		"name": "Globus",
+		"ip": "mcglobus.net",
+		"type": "PC",
+		"category": "kitpvp"
+	},
+	{
+		"name": "Crafters",
+		"ip": "crafters.dk",
+		"type": "PC",
+		"category": "kitpvp"
+	},
+	{
+		"name": "UniverseHub",
+		"ip": "universehub.dk",
+		"type": "PC",
+		"category": "kitpvp"
+	},
+	{
+		"name": "Patagonia Survival",
+		"ip": "spil.patagoniamc.dk",
+		"type": "PC",
+		"category": "kitpvp"
+	},
+	{
+		"name": "MarioPvP",
+		"ip": "mariopvp.dk",
+		"type": "PC",
+		"category": "kitpvp"
 	}
 ]

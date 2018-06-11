@@ -1,11 +1,21 @@
 {
 	"routes": {
 		"/": "assets/html/index.html",
-		"/images/compass.png": "assets/images/compass.png",
+		"/images/logo.png": "assets/images/logo.png",
 		"/js/site.js": "assets/js/site.js",
 		"/js/util.js": "assets/js/util.js",
 		"/js/graph.js": "assets/js/graph.js",
-		"/css/main.css": "assets/css/main.css"
+		"/css/main.css": "assets/css/main.css",
+		"/images/72.png": "assets/images/72.png",
+		"/images/96.png": "assets/images/96.png",
+		"/images/144.png": "assets/images/144.png",
+		"/images/168.png": "assets/images/168.png",
+		"/images/192.png": "assets/images/192.png",
+		"/images/512.png": "assets/images/512.png",
+		"/images/48.png": "assets/images/48.png",
+		"/manifest.json": "assets/html/manifest.json",
+		"/js/sw.js": "assets/js/sw.js",
+		"/offline.html": "assets/html/offline.html"
 	},
 	"faviconOverride": {
 

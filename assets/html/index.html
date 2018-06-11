@@ -1,129 +1,90 @@
 <!DOCTYPE html>
-
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
-		<link rel="icon" type="image/png" href="/images/compass.png">
-
-		<title>Danske Servere - Minetrack</title>
-		<meta name="description" content="Danske Servere - Minetrack">
+		<script defer src="https://design.jensz12.com/fa-pro/js/fontawesome-all.js"></script>
+		<link rel="icon" type="image/png" href="images/logo.png">
+		<link rel="manifest" href="/manifest.json">
+		<title>Danske Servere - Minetracker</title>
+		<meta name="description" content="Danske Servere - Minetracker">
 		<meta name="theme-color" content="#A81010">
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@jensz12">
 		<meta name="twitter:creator" content="@jensz12">
-		<meta name="twitter:title" content="Danske Servere - Minetrack">
-		<meta name="twitter:description" content="Danske Servere - Minetrack">
-		<meta name="twitter:image:src" content="http://tracker.jensz12.com/images/compass.png">
+		<meta name="twitter:title" content="Danske Servere - Minetracker">
+		<meta name="twitter:description" content="Danske Servere - Minetracker">
+		<meta name="twitter:image:src" content="https://minetracker.dk/images/logo.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="Minetracker">
+		<link rel="apple-touch-icon" href="https://minetracker.dk/images/logo.png">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-43679005-20', 'auto');
-  ga('send', 'pageview');
-
+		if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+		navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
+		// Registration was successful
+		console.log('ServiceWorker registration successful with scope: ', registration.scope);
+		}).catch(function(err) {
+		// registration failed :(
+		console.log('ServiceWorker registration failed: ', err);
+		});
+		});
+		}
 		</script>
-
 	</head>
-
 	<body>
-
 		<div id="tooltip"></div>
-
 		<div id="push">
-
 			<div id="header">
-
 				<div id="header-wrapper">
-
 					<div class="column" style="padding: 20px;">
-
-						<img src="/images/compass.png" width="28" height="28" style="display: inline-block; margin-right: 5px;">
-						<h1 style="display: inline-block;" class="text-uppercase">Danske Servere - Minetrack</h1>
+						<img src="images/logo.png" alt="Logo" width="28" height="28">
+						<h1 style="display: inline-block;" class="text-uppercase">Danske Servere - Minetracker</h1>
 						<p class="subslogan text-uppercase">Holder øje med <span id="stat_totalPlayers">0</span> spillere på <span id="stat_networks">0</span> netværk.</p>
-
 					</div>
-
 					<div id="mojang-status-list" class="column" style="float: right;">
-
-						<div class="mojang-status" title="Sessions" id="mojang-status_Sessions"><i class="fa fa-gamepad"></i><br /><strong>Sessions</strong><p class="mojang-status-text" id="mojang-status-text_Sessions">...</p></div><div class="mojang-status" title="Skins" id="mojang-status_Skins"><i class="fa fa-user"></i><br /><strong>Skins</strong><p class="mojang-status-text" id="mojang-status-text_Skins">...</p></div><div class="mojang-status" title="Auth" id="mojang-status_Auth"><i class="fa fa-key"></i><br /><strong>Auth</strong><p class="mojang-status-text" id="mojang-status-text_Auth">...</p></div><div class="mojang-status" title="API" id="mojang-status_API"><i class="fa fa-wrench"></i><br /><strong>API</strong><p class="mojang-status-text" id="mojang-status-text_API">...</p></div>
-
+						<div class="mojang-status" title="Sessions" id="mojang-status_Sessions"><i class="fas fa-gamepad"></i><br /><strong>Sessions</strong><p class="mojang-status-text" id="mojang-status-text_Sessions">...</p></div><div class="mojang-status" title="Skins" id="mojang-status_Skins"><i class="fas fa-user"></i><br /><strong>Skins</strong><p class="mojang-status-text" id="mojang-status-text_Skins">...</p></div><div class="mojang-status" title="Auth" id="mojang-status_Auth"><i class="fas fa-key"></i><br /><strong>Auth</strong><p class="mojang-status-text" id="mojang-status-text_Auth">...</p></div><div class="mojang-status" title="API" id="mojang-status_API"><i class="fas fa-wrench"></i><br /><strong>API</strong><p class="mojang-status-text" id="mojang-status-text_API">...</p></div>
 					</div>
-
 				</div>
-
 			</div>
-
 			<div id="perc-bar"></div>
-
 			<div id="tagline-text">Forbinder...</div>
-
 			<div id="big-graph"></div>
-
 			<div id="big-graph-controls" style="display: none;">
-
 				<span style="text-align: center; display: block;">
-
 					<a onclick="toggleControlsDrawer();">Se graf indstillinger</a>
-
 				</span>
-
 				<div id="big-graph-controls-drawer" style="display: none;">
-
 					<div id="big-graph-checkboxes"></div>
-
 					<br />
-
 					<span style="text-align: center; display: block; margin-bottom: 15px;">
-
 						<span onclick="setAllGraphVisibility(true);" class="button">Vis alle</span>
 						<span onclick="setAllGraphVisibility(false);" class="button">Skjul alle</span>
-
 					</span>
-
 				</div>
-
 			</div>
-
 			<div id="server-container-list"></div>
-
         </div>
-
         <div id="footer">
-
-			<span style="padding-left: 20px;">Made with <span style="color: #e74c3c;">&#9829;</span> by <a href="http://cryptkpr.me">Cryptkeeper</a>. Source code available on <a href="https://github.com/Cryptkeeper/Minetrack"><i class="fa fa-github"></i> Github</a>. Older individual server records may not be reflected due to tracking behavior.</span>
-
+			<span style="padding-left: 20px;">Made with <span style="color: #e74c3c;">&#9829;</span> by <a href="http://cryptkpr.me">Cryptkeeper</a>. Source code available on <a href="https://github.com/Cryptkeeper/Minetrack"><i class="fab fa-github"></i> Github</a>. Dansk version lavet af <a href="https://twitter.com/jensz12">Jens</a>. <i class="fal fa-envelope"></i> <a href="mailto:hej@minetracker.dk">hej@minetracker.dk</a>. <a href="https://twitter.com/minetrackerdk"><i class="fab fa-twitter"></i> Twitter </a></span>
 		</div>
-
         <!-- External JS assets -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.7/socket.io.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
-
         <!-- Internal JS assets -->
         <script src="js/util.js"></script>
         <script src="js/graph.js"></script>
 		<script src="js/site.js"></script>
-
 		<script src="publicConfig.json"></script>
-
 		<script>
-
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-60103580-2', 'auto');
-			ga('send', 'pageview');
-
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-43679005-20', 'auto');
+		ga('send', 'pageview');
 		</script>
-
 	</body>
-
 </html>
